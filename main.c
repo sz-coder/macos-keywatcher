@@ -19,7 +19,7 @@ CGEventRef CGEventCallback(CGEventTapProxy proxy, CGEventType type, CGEventRef e
 	(void)keyCode;
 
 	if (modifiers == RSHIFT_DOWN) {
-		system("curl http://10.10.10.10:4444/toggle-usb-switch --max-time 3 -o /dev/null &> /dev/null &");
+		system("/usr/bin/curl http://10.10.10.10:4444/toggle-usb-switch --max-time 3 -o /dev/null 1> /dev/null 2>/dev/null &");
 	}
 
 	return event;
